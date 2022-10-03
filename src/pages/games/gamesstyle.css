@@ -1,0 +1,231 @@
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid blue;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: blue;
+  }
+  
+  .overlay {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    z-index: 3;
+    margin: 70px auto;
+    padding: 40px;
+    background: rgba(109, 9, 239, 0.785);
+    border-radius: 5px;
+    width: 38%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: rgb(253, 253, 253);
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(249, 249, 249);
+  }
+  .popup .close:hover {
+    color: #aa06d8;
+  }
+  .popup .content {
+    max-height: 60%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+      
+
+
+
+
+
+
+
+
+
+.games-page{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.container-games{
+    justify-content: space-around;
+    
+  }
+  
+  .container-games .card-games{
+    position: relative;
+  }
+  
+  .container-games .card-games .games-face{
+    width:300px;
+    height: 170px;
+    transition:.4s;
+    
+  }
+  
+  .container-games .card-games .games-face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(50px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  }
+  
+  .container-games .card-games:hover .games-face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;
+     
+  }
+  
+  
+  .container-games .card-games .games-face.face1 .content-games{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+    
+     
+    
+    
+   
+  
+  }
+  
+  .container-games .card-games:hover .games-face.face1 .content-games{
+    opacity: 1;
+   
+  }
+  
+  .container-games .card-games .games-face.face1 .content-games i{
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+     
+  }
+  
+  .container-games .card-games .games-face.face1 .content-games h3{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    
+  
+  }
+  
+  .container-games .card-games .games-face.face1 .content-games a{
+     transition: .5s;
+  }
+  
+  .container-games .card-games .games-face.face2{
+     position: relative;
+     background: whitesmoke;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 7px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-120px);
+  }
+  
+  .container-games .card-games:hover .games-face.face2{
+      transform: translateY(0);
+  
+  
+  }
+  
+  .container-games .card-games .games-face.face2 .content-games p, a{
+    font-size: 10pt;
+    margin: 0 ;
+    padding: 0;
+    color:#333;
+  }
+  
+  .container-games .card-games .games-face.face2 .content-games a{
+    text-decoration:none;
+    color: black;
+    box-sizing: border-box;
+    outline : 1px dashed #333;
+    padding: 10px;
+    margin: 8px 0 0;
+    display: inline-block;
+  }
+  
+  .container-games .card-games .games-face.face2 .content-games a:hover{
+    background: #333 ;
+    color: whitesmoke; 
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  
+  .game-image{
+    width:300px;
+    height: 167px;
+  }
+
+  
+
+
+
+

@@ -41,31 +41,67 @@ export default function Signup({ authenticate }) {
   }
 
   return (
-    <div>
+    <div className="signup-box">
       <h1>Sign Up</h1>
       <form onSubmit={handleFormSubmission} className="auth__form">
-        <label htmlFor="input-username">Username</label>
+
+      <div className="usersign-box">
+        
         <input
-          id="input-username"
+          id="input-completeName"
           type="text"
-          name="username"
-          placeholder="Text"
+          name="completeName"
+          placeholder=""
           value={username}
           onChange={handleInputChange}
           required
         />
+        <label htmlFor="input-completeName">Complete Name</label>
+      </div>
 
-        <label htmlFor="input-password">Password</label>
+
+      <div className="usersign-box">
+        
+        <input
+          id="input-username"
+          type="text"
+          name="username"
+          placeholder=""
+          value={username}
+          onChange={handleInputChange}
+          required
+        />
+        <label htmlFor="input-username">Username</label>
+      </div>
+
+      <div className="usersign-box">
+        
+        <input
+          id="input-email"
+          type="text"
+          name="email"
+          placeholder=""
+          value={username}
+          onChange={handleInputChange}
+          required
+        />
+        <label htmlFor="input-completeName">Email</label>
+      </div>
+
+      <div className="usersign-box">
+        
         <input
           id="input-password"
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder=""
           value={password}
           onChange={handleInputChange}
           required
           minLength="8"
         />
+        <label htmlFor="input-password">Password</label>
+      </div>
 
         {error && (
           <div className="error-block">
@@ -75,6 +111,10 @@ export default function Signup({ authenticate }) {
         )}
 
         <button className="button__submit" type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
           Submit
         </button>
       </form>

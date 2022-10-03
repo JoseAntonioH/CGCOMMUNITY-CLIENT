@@ -1,24 +1,17 @@
-import logo from "../logo.svg";
+
 import "../App.css";
 
 function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="aboutUs">
+               
+                <img className="img-cgcom" src="images/CG-COMMUNITY.png"/>
+
+                <div className="text-us">
+                    <p className="text-aboutUs">"This is a community for competitive players that seek to improve their skills and have a fun time playing videogames"</p>
+                    <h3 class="animate-charcter">EAT  SLEEP GAME REPEAT</h3>
+                </div>
+            </div> 
   );
 }
 

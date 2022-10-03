@@ -1,48 +1,61 @@
-nav {
-  display: flex;
-  padding: 1em;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  background: #282c34;
-  font-weight: 600;
+
+#trapezoid {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  border: 80px solid rgba(0,0,0,0);
+  border-top: 0 solid;
+  border-bottom: 100px solid rgba(1, 1, 1, .4);
+  -webkit-border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 0;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  margin-top:-7px;
+  width: 690px;
+  position: relative;
+  transition: all 0.7s ease;
+  padding-left:2%;
 }
 
-.nav__projectName {
-  color: #e4f9ff;
-  text-decoration: none;
+#trapezoid a{
+ -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
-.authLink {
-  color: #61dafb;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
 
-.authLink + .authLink {
-  padding: 1em;
-}
 
-.authLink:hover {
-  color: #ffffff;
-}
-
-.nav-logoutbtn {
-  font-family: inherit;
-  font-weight: inherit;
-  padding: 0.5em 1em;
-  margin-left: 1em;
-  background-color: #5595ff;
-  box-shadow: 0 0 5px 0 aliceblue;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  color: #e3f2ff;
-  transition: all 0.2s ease-in-out;
+.navbar {
   position: sticky;
   top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: .001px;
+  z-index: 2;
 }
 
-.nav-logoutbtn:hover {
-  transform: scale(1.05);
-  background-color: #d13e3e;
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all 0.5s ease;
 }
+
+.navbar a:hover {
+  background:#8CA6DB;
+  color: black;
+  border-radius:5px;
+}
+
+
+

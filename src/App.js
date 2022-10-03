@@ -5,6 +5,17 @@ import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
+import HomePage from "./pages/HomePage";
+import LogIn from "./pages/LogIn";
+import Signup from "./pages/Signup";
+import Feautures from "./pages/feautures";
+import Profile from "./pages/profile";
+import Games from "./pages/games";
+import GameDetails from "./pages/gameDetails";
+import EditGames from "./pages/editGames";
+
+
+
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -53,10 +64,24 @@ export default function App() {
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
       <Routes>
-        {routes({ user, authenticate, handleLogout }).map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))}
+        
+        
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/feautures" element={<Feautures/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/games" element={<Games/>}/>
+        <Route path="/games/:id" element={<GameDetails/>}/>
+        <Route path="/games/edit/:id" element={<EditGames/>}/>
+        <Route path="/auth/login" element={<LogIn authenticate={authenticate}/>}/>
+        <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
+        
+        
       </Routes>
     </div>
   );
 }
+
+
+ //{routes({ user, authenticate, handleLogout }).map((route) => (
+          //<Route key={route.path} path={route.path} element={route.element} />
+       //))}

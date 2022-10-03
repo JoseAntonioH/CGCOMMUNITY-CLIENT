@@ -37,40 +37,52 @@ export default function LogIn({ authenticate }) {
   }
 
   return (
-    <div>
+    <div className="login-box">
       <h1>Log In</h1>
       <form onSubmit={handleFormSubmission} className="signup__form">
-        <label htmlFor="input-username">Username</label>
+        
+        <div className="user-box">
+        
         <input
           id="input-username"
           type="text"
           name="username"
-          placeholder="username"
+          placeholder=""
           value={username}
           onChange={handleInputChange}
           required
         />
+        <label htmlFor="input-username">Username</label>
 
-        <label htmlFor="input-password">Password</label>
+        </div>
+
+        <div className="user-box">
+        
         <input
           id="input-password"
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder=""
           value={password}
           onChange={handleInputChange}
           required
           minLength="8"
         />
+        <label htmlFor="input-password">Password</label>
+
+        </div>
 
         {error && (
           <div className="error-block">
-            <p>There was an error submiting the form:</p>
             <p>{error.message}</p>
           </div>
         )}
 
         <button className="button__submit" type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
           Submit
         </button>
       </form>

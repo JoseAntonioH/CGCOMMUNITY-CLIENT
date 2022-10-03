@@ -6,31 +6,39 @@ import * as CONSTS from "../../utils/consts";
 
 const Navbar = (props) => {
   return (
-    <nav>
+    <nav className="navbar">
+      <div id="trapezoid">
       <Link to={PATHS.HOMEPAGE} className="nav__projectName">
-        {CONSTS.CAPITALIZED_APP} - created with IronLauncher
+        {CONSTS.CAPITALIZED_APP} 
       </Link>
 
       <div className="nav__authLinks">
         {props.user ? (
           <>
-            <Link to={PATHS.PROTECTEDPAGE} className="authLink">
-              Protected Page
+            <Link to={"/profile"} className="authLink">
+              PROFILE
             </Link>
-            <button className="nav-logoutbtn" onClick={props.handleLogout}>
-              Logout
-            </button>
+            <Link to={"/games"} className="authLink">
+              Games
+            </Link>
+            <Link className="nav-logoutbtn" onClick={props.handleLogout}>
+              Log Out
+            </Link>
           </>
         ) : (
           <>
-            <Link to={PATHS.SIGNUPPAGE} className="authLink">
-              Signup
+          <Link to={"/feautures"} className="authLink">
+              Features
             </Link>
-            <Link to={PATHS.LOGINPAGE} className="authLink">
+            <Link to={"/auth/signup"} className="authLink">
+              Sign Up
+            </Link>
+            <Link to={"/auth/login"} className="authLink">
               Log In
             </Link>
           </>
         )}
+      </div>
       </div>
     </nav>
   );
