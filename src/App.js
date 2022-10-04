@@ -13,6 +13,7 @@ import Profile from "./pages/profile";
 import Games from "./pages/games";
 import GameDetails from "./pages/gameDetails";
 import EditGames from "./pages/editGames";
+import DetailsTournament from "./pages/detailsTournaments";
 
 
 
@@ -68,10 +69,11 @@ export default function App() {
         
         <Route path="/" element={<HomePage/>}/>
         <Route path="/feautures" element={<Feautures/>}/>
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/profile" element={<Profile user={user}/>}/>
         <Route path="/games" element={<Games/>}/>
         <Route path="/games/:id" element={<GameDetails/>}/>
         <Route path="/games/edit/:id" element={<EditGames/>}/>
+        <Route path="/games/tournaments/:id" element={<DetailsTournament/>}/>
         <Route path="/auth/login" element={<LogIn authenticate={authenticate}/>}/>
         <Route path="/auth/signup" element={<Signup authenticate={authenticate}/>}/>
         

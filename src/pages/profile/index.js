@@ -2,14 +2,27 @@ import React from "react";
 
 
 
-function Profile(){
-    return (            
-        <div className="profile">
-            PROFILE
-        </div>      
-    )
-}
-
+const Profile = (props) => {
+    return (
+      <div className="navbar">
+       
+  
+        
+          {props.user ? (
+            <>
+             <p>{props.user.username}</p>
+             <p>{props.user.email}</p>
+             <p>{props.user.completeName}</p>
+            </>
+          ) : (
+            <>
+           
+            </>
+          )}
+        
+      </div>
+    );
+  };
 
 
 export default Profile;

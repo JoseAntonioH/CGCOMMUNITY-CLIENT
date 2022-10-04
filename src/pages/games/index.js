@@ -30,15 +30,9 @@ function Games(){
     
     return (
 
-
-
-
-        
         <div className="games-page">
-          
-	
 
-    {games.map((game) => {
+            {games.map((game) => {
                 return ( 
                     <div className="container-games" key={game._id} >
                     
@@ -46,8 +40,8 @@ function Games(){
                         <div class="games-face face1">
                             <div class="content-games">           
                                 <Link to={`/games/${game._id}`}>
-                      <h3>{game.gameName}</h3>
-                    </Link>
+                                <h3>{game.gameName}</h3>
+                                </Link>
                             </div>
                         </div>
                         <div class="games-face face2">
@@ -63,39 +57,26 @@ function Games(){
             })}     
              
 
-<div id="popup1" class="overlay">
-	<div class="popup">
-		<h2>Add Game</h2>
-		<a class="close" href="#">×</a>
-
-        
-		<div class="content">
-        <AddGame refreshGames={getAllGames}/>
-		</div>
-	</div>
-   
-                        
-
-                        
-
-                        </div>
-
-                        <div className="container-games"  >
-                    
-                    <div className="card-games">
-                        <div className="games-face face1">
-                            <div className="content-games">           
-                                
-                      <a  href="#popup1"><h3>Add Game</h3></a>
-                            </div>
-                        </div>
-                        
-
+            <div id="popup1" class="overlay">
+	            <div class="popup">
+		            <h2>Add Game</h2>
+		            <a class="close" href="#">×</a>
+		            <div class="content">
+                        <AddGame refreshGames={getAllGames}/>
+		            </div>
+	            </div>
             </div>
 
-
-                    </div>
+            <div className="container-games"  >
                     
+                <div className="card-games">
+                    <div className="games-face face1">
+                        <div className="content-games">                     
+                            <a  href="#popup1"><h3>Add Game</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

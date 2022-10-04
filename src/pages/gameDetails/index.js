@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link,useParams,useNavigate } from "react-router-dom";
 import "./detailsstyle.css";
 import SocialMedia from "../../components/social/social";
-//import AddGame from "../components/AddGame";
+import AddTournament from "../../components/addTournament";
 
 
 const API_URL = "http://localhost:5005";
@@ -52,34 +52,24 @@ function GameDetails(props){
             <a  href="#popup1"><img className="trashcan" src="../images/trashcan.png"/></a>
             <Link  to={`/games/edit/${games?._id}`}><img className="trashcan" src="../images/edit.png"/></Link>
         
-        <div className="gamedetails-page">
-             
-             <div id="popup1" class="overlay">
-	<div class="popup">
-  
-        
-        
-		<h2>Are you sure to delete this Game?</h2>
-        
-       
-		<a class="close" href="#">×</a>
-        
-        <button className="excelentbutton" onClick={deleteGame}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Delete Game</button>
-        
-        
-		
-		</div>
+            <div className="gamedetails-page"> 
 
+                <div id="popup1" class="overlay">
+	                <div class="popup">
+		                <h2>Are you sure to delete this Game?</h2>
+		                <a class="close" href="#">×</a>
         
+                        <button className="excelentbutton" onClick={deleteGame}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Delete Game</button>
+		            </div>
+	            </div>
 
-	</div>
-
-    
+                <p className="t-text">Tournaments</p>
+                <p className="s-text">SOCIAL</p>
             
             {games &&(
                 <>
@@ -107,46 +97,101 @@ function GameDetails(props){
                     </li>
                     
                 <li>
+                <div className="extra">
+                <div className="column-tournaments" >
                 {games && 
                     games.tournament.map((tournament)=>(
                     <div className="columns-extra" key={tournament._id}>  
-                    <div className="column-tournaments" >
                     
                     
-                    <p>{tournament.tournamentName}</p>
+                    
+                        
+                    <Link className="link-tournament" to={`/games/tournaments/${tournament._id}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    {tournament.tournamentName}
+                    </Link>
+                    
+                    
+                    
                     </div>
-                    <div className="column-social">
-                    <p>{tournament.description}</p>
-                    </div>
-                    </div> 
+                    
                     
                     ))
                 }
-
+                </div> 
+                <div className="column-social" >
                 {games && 
                     games.social.map((social)=>(
-                    <div className="columns-extra" key={social._id}>  
-                    <div className="column-tournaments" >
+                     
+                    <div className="" key={social._id}>
                     
                     
                     <p>{social.userName}</p>
-                    </div>
-                    <div className="column-social">
+                    
+                    
                     <p>{social.description}</p>
-                    </div>
+                    
                     </div> 
                     ))
                 }
+                </div>
+                </div>
                 </li>
                 
                 </ul>
                 
-                <h3 class="card__title">{games?.tournament.tournamentName}</h3> 
+                
                 </>
             )}
             <SocialMedia/>
+
+            <div className="container-tourn"  >
+                    
+                <div className="card-games">
+                    <div className="games-face face1">
+                        <div className="content-games">                     
+                            <a  href="#popup3"><h3>Add Tournament</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <div id="popup3" class="overlay">
+	            <div class="popup">
+		            <h2>Add Tournament</h2>
+		            <a class="close" href="#">×</a>
+		            <div class="content">
+                        <AddTournament refreshTournaments={getGame} gameId={id}/>
+		            </div>
+	            </div>
+            </div>
+
+            <div className="container-social"  >
+                    
+                <div className="card-games">
+                    <div className="games-face face1">
+                        <div className="content-games">                     
+                            <a  href="#popup4"><h3>Add Social</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="popup4" class="overlay">
+	            <div class="popup">
+		            <h2>Add Post</h2>
+		            <a class="close" href="#">×</a>
+		            <div class="content">
+                        
+		            </div>
+	            </div>
+            </div>
             
+
+
         </div>
         </div>
 

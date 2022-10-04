@@ -59,9 +59,10 @@ function AddGame(props) {
         
         <input
           type="text"
-          name="title"
+          name="gameName"
           value={gameName}
           onChange={(e) => setGameName(e.target.value)}
+          required
         />
         <label>Title</label>
         </div>
@@ -75,6 +76,7 @@ function AddGame(props) {
             placeholder=""
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            required
         />
         <label>Image</label>
         </div>
@@ -85,7 +87,8 @@ function AddGame(props) {
           type="text"
           name="genre"
           value={genre}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setGenre(e.target.value)}
+          required
         />
         <label>Genre</label>
         </div>
@@ -96,7 +99,8 @@ function AddGame(props) {
           type="text"
           name="platforms"
           value={platforms}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setPlatforms(e.target.value)}
+          required
         />
         <label>Platforms</label>
         </div>
@@ -107,7 +111,8 @@ function AddGame(props) {
           type="text"
           name="twitter"
           value={twitter}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setTwitter(e.target.value)}
+          required
         />
         <label>Twitter</label>
         </div>
@@ -118,7 +123,8 @@ function AddGame(props) {
           type="text"
           name="instagram"
           value={instagram}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setInstagram(e.target.value)}
+          required
         />
         <label>Instagram</label>
         </div>
@@ -129,7 +135,8 @@ function AddGame(props) {
           type="text"
           name="youtube"
           value={youtube}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setYoutube(e.target.value)}
+          required
         />
         <label>Youtube</label>
         </div>
@@ -140,7 +147,8 @@ function AddGame(props) {
           type="text"
           name="facebook"
           value={facebook}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setFacebook(e.target.value)}
+          required
         />
         <label>Facebook</label>
         </div>
@@ -151,20 +159,10 @@ function AddGame(props) {
           type="text"
           name="icon"
           value={icon}
-          onChange={(e) => setImage(e.target.value)}
+          onChange={(e) => setIcon(e.target.value)}
+          required
         />
         <label>Icon</label>
-        </div>
-
-        <div className="user-box">
-        
-        <input
-          type="text"
-          name="developer"
-          value={developer}
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <label>Developer</label>
         </div>
  
         <button className="button__submit" type="submit" to="/games">
