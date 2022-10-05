@@ -5,19 +5,16 @@ import { Link,useParams,useNavigate } from "react-router-dom";
 import "./detailsstyle.css";
 import SocialMedia from "../../components/social/social";
 import AddTournament from "../../components/addTournament";
+import AddSocial from "../../components/addSocial";
+
 
 
 const API_URL = "http://localhost:5005";
-
-
-
 
 function GameDetails(props){
     const [games, setGame] = useState(null);
     const {id}=useParams();
     const navigate = useNavigate();
-    
-  
 
     const deleteGame = () => {
 
@@ -60,139 +57,133 @@ function GameDetails(props){
 		                <a class="close" href="#">×</a>
         
                         <button className="excelentbutton" onClick={deleteGame}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Delete Game</button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Delete Game
+                        </button>
 		            </div>
 	            </div>
 
                 <p className="t-text">Tournaments</p>
                 <p className="s-text">SOCIAL</p>
             
-            {games &&(
-                <>
-                <ul class="cards">
-                    <li>
-                        <a href="" class="card">
-                        <img src={games.image} class="card__image" alt="" />
-                        <div class="card__overlay">
-                            <div class="card__header">
-                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                                <img class="card__thumb" src={games?.icon}  alt="" />
-                                <div class="card__header-text">
-                                    <h3 class="card__title">{games?.gameName}</h3>            
+                {games &&(
+                    <>
+                        <ul class="cards">
+                            <li>
+                                <a href="" class="card">
+                                <img src={games.image} class="card__image" alt="" />
+                                <div class="card__overlay">
+                                    <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <img class="card__thumb" src={games?.icon}  alt="" />
+                                        <div class="card__header-text">
+                                            <h3 class="card__title">{games?.gameName}</h3>            
                                     
-                                </div>
-                               
-                            </div>
-                            <div className="game-info">
-                                <p><span><img className="img-platform" src="../images/platform.png"/>: {games?.platforms}</span></p>
-                                <p><span><img className="img-genre" src="../images/genre.png"/>: {games?.genre}</span></p>
-                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="game-info">
+                                        <p><span><img className="img-platform" src="../images/platform.png"/>: {games?.platforms}</span></p>
+                                        <p><span><img className="img-genre" src="../images/genre.png"/>: {games?.genre}</span></p>
+                                    </div>
                             
-                        </div>
-                        </a>      
-                    </li>
+                                </div>
+                                </a>      
+                            </li>
                     
-                <li>
-                <div className="extra">
-                <div className="column-tournaments" >
-                {games && 
-                    games.tournament.map((tournament)=>(
-                    <div className="columns-extra" key={tournament._id}>  
+                            <li>
+                                <div className="extra">
+                                    <div className="column-tournaments" >
+                                        {games && 
+                                            games.tournament.map((tournament)=>(
+                                                <div className="columns-extra" key={tournament._id}>  
                     
-                    
-                    
-                        
-                    <Link className="link-tournament" to={`/games/tournaments/${tournament._id}`}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    {tournament.tournamentName}
-                    </Link>
+                                                    <Link className="link-tournament" to={`/games/tournaments/${tournament._id}`}>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        {tournament.tournamentName}
+                                                    </Link>
+                                                </div>
                     
                     
-                    
-                    </div>
-                    
-                    
-                    ))
-                }
-                </div> 
-                <div className="column-social" >
-                {games && 
-                    games.social.map((social)=>(
+                                            ))
+                                        }
+                                    </div> 
+                                    <div className="column-social" >
+                                        {games && 
+                                            games.social.map((social)=>(
                      
-                    <div className="" key={social._id}>
-                    
-                    
-                    <p>{social.userName}</p>
-                    
-                    
-                    <p>{social.description}</p>
-                    
-                    </div> 
-                    ))
-                }
-                </div>
-                </div>
-                </li>
+                                                <div className="" key={social._id}>
+                                                    <div class="blog_post">
+                                                        <div class="img_pod">
+                                                            <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image"/>
+                                                        </div>
+                                                        <div class="container_copy">
+                                                            <p>{social.createdAt}</p>
+                                                            <h1>{social.userName}</h1>
+                                                            <p>{social.description}</p>
+                                                            <a class="btn_primary" href='#' target="_blank">Read More</a>
+                                                        </div>
+  
+                                                    </div>
+                                                </div> 
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            </li>
                 
-                </ul>
-                
-                
-                </>
-            )}
-            <SocialMedia/>
+                        </ul>
+                    </>
+                )}
+                <SocialMedia/>
 
-            <div className="container-tourn"  >
+                <div className="container-tourn"  >
                     
-                <div className="card-games">
-                    <div className="games-face face1">
-                        <div className="content-games">                     
-                            <a  href="#popup3"><h3>Add Tournament</h3></a>
+                    <div className="card-games">
+                        <div className="games-face face1">
+                            <div className="content-games">                     
+                                <a  href="#popup3"><h3>Add Tournament</h3></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             
-            <div id="popup3" class="overlay">
-	            <div class="popup">
-		            <h2>Add Tournament</h2>
-		            <a class="close" href="#">×</a>
-		            <div class="content">
-                        <AddTournament refreshTournaments={getGame} gameId={id}/>
-		            </div>
-	            </div>
-            </div>
+                <div id="popup3" class="overlay">
+	                <div class="popup">
+		                <h2>Add Tournament</h2>
+		                <a class="close" href="#">×</a>
+		                <div class="content">
+                            <AddTournament refreshTournaments={getGame} gameId={id}/>
+		                </div>
+	                </div>
+                </div>
 
-            <div className="container-social"  >
+                <div className="container-social"  >
                     
-                <div className="card-games">
-                    <div className="games-face face1">
-                        <div className="content-games">                     
-                            <a  href="#popup4"><h3>Add Social</h3></a>
+                    <div className="card-games">
+                        <div className="games-face face1">
+                            <div className="content-games">                     
+                                <a  href="#popup4"><h3>Add Social</h3></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div id="popup4" class="overlay">
+	                <div class="popup">
+		                <h2>Add Post</h2>
+		                <a class="close" href="#">×</a>
+		                <div class="content">
+                            <AddSocial refreshSocial={getGame} gameId={id}/>
+		                </div>
+	                </div>
+                </div>
             </div>
-
-            <div id="popup4" class="overlay">
-	            <div class="popup">
-		            <h2>Add Post</h2>
-		            <a class="close" href="#">×</a>
-		            <div class="content">
-                        
-		            </div>
-	            </div>
-            </div>
-            
-
-
-        </div>
         </div>
 
     );

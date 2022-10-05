@@ -89,7 +89,6 @@
     }
 }
       
-
 .games-page{
     display: flex;
     justify-content: space-evenly;
@@ -136,7 +135,6 @@
       -10px 0 80px #f0f,
       10px 0 80px #0ff;     
 }
-  
   
 .container-games .card-games .games-face.face1 .content-games{
     opacity: .2;
@@ -207,5 +205,3 @@
     width:300px;
     height: 167px;
 }
-
-  

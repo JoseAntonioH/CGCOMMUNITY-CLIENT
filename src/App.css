@@ -7,7 +7,6 @@ font-family: sans-serif;
   margin:0px;
 }
 
-
 .aboutUs{
   margin-top: 150px;
   display: flex;
@@ -30,7 +29,6 @@ font-family: sans-serif;
   padding-top: 80px;
 }
 
-
 .animate-charcter
 {
    text-transform: uppercase;
@@ -45,8 +43,7 @@ font-family: sans-serif;
   background-clip: border-box;
   background-size: 200% auto;
   color: #fff;
-  background-clip: text;
- 
+  background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -59,10 +56,6 @@ font-family: sans-serif;
     background-position: 200% center;
   }
 }
-
-
-
-
 
 .login-box {
   text-align: center;
@@ -118,13 +111,6 @@ font-family: sans-serif;
   color: #03e9f4;
   font-size: 12px;
 }
-
-
-
-
-
-
-
 
 .login-box form button {
   background-color: Transparent;
@@ -232,9 +218,6 @@ font-family: sans-serif;
   }
 }
 
-
-
-
 .signup-box {
   text-align: center;
   margin-top: 5%;
@@ -289,7 +272,6 @@ font-family: sans-serif;
   color: #03e9f4;
   font-size: 12px;
 }
-
 
 .signup-box form button {
   background-color: Transparent;
@@ -396,10 +378,6 @@ font-family: sans-serif;
     bottom: 100%;
   }
 }
-
-
-
-
 
 .excelentbutton {
   margin-left: 180px;

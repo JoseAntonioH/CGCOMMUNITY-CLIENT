@@ -28,7 +28,7 @@ function Feautures(){
                     <div class="face face1">
                         <div class="content">
                             <i class="fab fa-android"></i>               
-                                <h3>TOURNAMENTS</h3>
+                            <h3>TOURNAMENTS</h3>
                         </div>
                     </div>
                     <div class="face face2">

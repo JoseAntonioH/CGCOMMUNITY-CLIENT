@@ -2,19 +2,21 @@
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import "./addTournament.css";
+import Profile from "../../pages/profile";
+import * as PATHS from "../../utils/paths";
+import * as CONSTS from "../../utils/consts";
+
 
 
  
 const API_URL = "http://localhost:5005";
 
-
  
-function AddTournament(props) {
-  const [tournamentName, setTournamentName] = useState("");
+function AddSocial(props) {
+  const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
-  const [prize, setPrize] = useState("");
+  
   
   const navigate = useNavigate();
  
@@ -25,19 +27,20 @@ function AddTournament(props) {
 
   const handleSubmit = (e) => {                       
     e.preventDefault();
-
+    const { userId } = props;
     const { gameId } = props;
+    
  
-    const requestBody = { tournamentName,date,description,prize,gameId };
+    const requestBody = { userId,title,date,description,gameId };
     axios
-      .post(`${API_URL}/games/tournaments`, requestBody)
+      .post(`${API_URL}/games/social`, requestBody)
       .then((response) => {
         // Reset the state
-        setTournamentName("");
+        setTitle("");
         setDate("");
         setDescription("");
-        setPrize("");
-        props.refreshTournaments();
+        
+        props.refreshSocial();
       })
       .catch((error) => console.log(error));
   };
@@ -49,28 +52,44 @@ function AddTournament(props) {
       <form onSubmit={handleSubmit} className="signup__form">
       <div className="user-box">
         
-        <input
+
+      {props.user ? (
+          <>
+            <input
           type="text"
-          name="tournamentName"
-          value={tournamentName}
-          onChange={(e) => setTournamentName(e.target.value)}
+          name="userName"
+          placeholder={props.user.username}
+          
           required
         />
-        <label>Tournament Name</label>
+        <label>User</label>
+          </>
+        ) : (
+          <>
+          
+          </>
+        )}
+
+
+
+
+
+        
+        
         </div>
 
         <div className="user-box">
-        
+
         <input
             id="input-image"
             type="text"
             name="date"
             placeholder=""
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             required
         />
-        <label>Date</label>
+        <label>Title</label>
         </div>
 
 
@@ -87,28 +106,18 @@ function AddTournament(props) {
         </div>
 
 
-        <div className="user-box">
-        
-        <input
-          type="text"
-          name="prize"
-          value={prize}
-          onChange={(e) => setPrize(e.target.value)}
-          required
-        />
-        <label>Prize</label>
-        </div>
+      
  
         <button className="button__submit" type="submit">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Add Tournament
+            Add Post
         </button>
-        </form>
+      </form>
     </div>
   );
 }
  
-export default AddTournament;
+export default AddSocial;

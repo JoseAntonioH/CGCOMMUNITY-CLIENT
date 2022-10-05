@@ -40,7 +40,7 @@ function Games(){
                         <div class="games-face face1">
                             <div class="content-games">           
                                 <Link to={`/games/${game._id}`}>
-                                <h3>{game.gameName}</h3>
+                                    <h3>{game.gameName}</h3>
                                 </Link>
                             </div>
                         </div>

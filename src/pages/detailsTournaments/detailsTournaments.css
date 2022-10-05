@@ -10,21 +10,26 @@
     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     overflow: hidden;
   }
-  .blog *{
+
+.blog *{
     position: relative;
     z-index: 2;
-  }
-  .blog:hover .color-overlay{
+}
+
+.blog:hover .color-overlay{
     background:rgba(74, 100, 114, 0.8);
-  }
-  .blog:hover .info{
+}
+
+.blog:hover .info{
     bottom: -3em;
     opacity: 1;
-  }
-  .blog, .color-overlay{
+}
+
+.blog, .color-overlay{
      border-radius: 0.7em;
-  }
-  .color-overlay{
+}
+  
+.color-overlay{
     top: 0;
     left: 0;
     right: 0;
@@ -33,15 +38,16 @@
     transition: 0.7s background;
     background: rgba(74, 100, 114, 0.3);
     z-index: 1;
-  }
+}
   
-  .title-box{
+.title-box{
     display: inline-block;
     width: 100%;
     text-align: center;
     margin-top: 2em;
-  }
-  .title-box hr{
+}
+  
+.title-box hr{
     margin-top: -0.4em;
     margin-bottom: 1em;
     width: 5em;
@@ -49,42 +55,43 @@
     box-sizing: content-box;
     border: none;
     background: #D0BC57;
-  }
-  h3{
+}
+  
+h3{
      display: inline-block;
      font-weight: 500;
      letter-spacing: 2px;
      font-size: 1.4em;
      
      text-align: center;
-  }
-  .intro{
-      width: 170px;
+}
+  
+.intro{
+    width: 170px;
     margin: 0 auto;
     color: #fff;
     font-family: 'Droid Serif', serif;
     font-size: 19px;
     font-style: italic;
     line-height: 18px;
-  }
+}
   
   
-  .info{
+.info{
     font-family: 'Droid Serif', serif;
     font-size: 1.2em;
     color: #ddd;
     line-height: 1.1em;
     padding: 0 2em;
-   
     position: relative;
     bottom: -4em;
     opacity: 0;
     background: transparent;
     transition: opacity 0.3s, bottom 0.3s;
     text-align: center;
-  }
+}
   
-  .footer{
+.footer{
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -92,9 +99,9 @@
     height: 10em;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
     border-radius:  0 0 0.7em 0.7em;
-  }
+}
   
-  .footer > .icon-holder{
+.footer > .icon-holder{
     position: absolute;
     bottom: 0;
     height: 3em;
@@ -102,26 +109,23 @@
     display: inline-block;
     font-size: 1.2em;
     padding: 0 2em;
-    
-  }
+}
   
-  .icon-holder i{
-    
+.icon-holder i{ 
     color: #D0BC57;
   }
   
-  .icon-holder span, h3{
+.icon-holder span, h3{
     color: #aCcff0;
-  }
+}
   
-  space{
+space{
     display: inline-block;
     width: 0.6em;
     height: 1em;
-  }
+}
 
-
-  .overlay {
+.overlay {
     z-index: 3;
     position: fixed;
     top: 0;
@@ -184,5 +188,4 @@
     .popup{
       width: 70%;
     }
-
 }

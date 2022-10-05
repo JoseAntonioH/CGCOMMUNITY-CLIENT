@@ -1,4 +1,3 @@
-
 #trapezoid {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -27,8 +26,6 @@
   transform: rotateX(180deg);
 }
 
-
-
 .navbar {
   position: sticky;
   top: 0;
@@ -56,6 +53,3 @@
   color: black;
   border-radius:5px;
 }
-
-
-

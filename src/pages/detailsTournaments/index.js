@@ -5,9 +5,6 @@ import { Link,useParams,useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./detailsTournaments.css";
 
-
-
-
 const API_URL = "http://localhost:5005";
 
 function DetailsTournament(props) {
@@ -31,82 +28,72 @@ function DetailsTournament(props) {
       };
 
     const getTournament = () => {
-      axios
-        .get(`${API_URL}/games/tournaments/${id}`)
-        .then((response) => {
-            const oneTournament=response.data;
-            setTournament(oneTournament);
-        })
-        .catch((error) => console.log(error));
+        axios
+            .get(`${API_URL}/games/tournaments/${id}`)
+            .then((response) => {
+                const oneTournament=response.data;
+                setTournament(oneTournament);
+            })
+            .catch((error) => console.log(error));
     };
 
     useEffect(() => {
         getTournament();
     });
 
-  return (
+    return (
 
-    <div>
-     <a  href="#popup1"><img className="trashcan" src="/images/trashcan.png"/></a>
-     <Link  ><img className="trashcan" src="/images/edit.png"/></Link>
+        <div>
+            <a  href="#popup1"><img className="trashcan" src="/images/trashcan.png"/></a>
+            <Link  ><img className="trashcan" src="/images/edit.png"/></Link>
 
-     <div id="popup1" class="overlay">
-	                <div class="popup">
-		                <h2>Are you sure to delete this Tournament?</h2>
-		                <a class="close" href="#">×</a>
+            <div id="popup1" class="overlay">
+	            <div class="popup">
+		            <h2>Are you sure to delete this Tournament?</h2>
+		            <a class="close" href="#">×</a>
         
-                        <button className="goodbutton" onClick={deleteTournament}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Delete Tournament</button>
-		            </div>
-	            </div>
+                    <button className="goodbutton" onClick={deleteTournament}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Delete Tournament</button>
+		        </div>
+	        </div>
 
-        <>
+            <>
         
-        <div class="blog">
+            <div class="blog">
   
-    <div class="title-box">
-      <h3>
-      {tournament?.tournamentName}
-      </h3>
-      <hr/>
-      <div class="intro">
-        Prize: ${tournament?.prize}
-      </div>
-    </div>  
-    <div class="info">
-      <span>{tournament?.description}</span>
-      <p><span><a>Join</a></span></p>
-  </div>
-  <div class="footer">
-    <div class="icon-holder">
-      <span>
-    <i class="fa fa-comment-o"></i>
-      
-      <space></space>
-      <i class="fa fa-calendar"></i>
-      <span>{tournament?.date}</span>
-      </span>
-    </div>
-  </div>
+                <div class="title-box">
+                    <h3>
+                        {tournament?.tournamentName}
+                    </h3>
+                    <hr/>
+                    <div class="intro">
+                        Prize: ${tournament?.prize}
+                    </div>
+                </div>  
+                <div class="info">
+                    <span>{tournament?.description}</span>
+                    <p><span><a>Join</a></span></p>
+                </div>
+                <div class="footer">
+                    <div class="icon-holder">
+                        <span>
+                            <i class="fa fa-comment-o"></i>
+                            <space></space>
+                            <i class="fa fa-calendar"></i>
+                            <span>{tournament?.date}</span>
+                        </span>
+                    </div>
+                </div>
   
- <div class="color-overlay"></div>
-</div>
- 
- 
-          
-          
-        </>
-      
-      
- 
-    
-
-    </div>
-  );
+                <div class="color-overlay"></div>
+            </div>
+            </>
+        </div>
+    );
 }
     
 

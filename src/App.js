@@ -71,7 +71,7 @@ export default function App() {
         <Route path="/feautures" element={<Feautures/>}/>
         <Route path="/profile" element={<Profile user={user}/>}/>
         <Route path="/games" element={<Games/>}/>
-        <Route path="/games/:id" element={<GameDetails/>}/>
+        <Route path="/games/:id" element={<GameDetails user={user}/>}/>
         <Route path="/games/edit/:id" element={<EditGames/>}/>
         <Route path="/games/tournaments/:id" element={<DetailsTournament/>}/>
         <Route path="/auth/login" element={<LogIn authenticate={authenticate}/>}/>
