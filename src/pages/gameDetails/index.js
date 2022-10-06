@@ -9,7 +9,7 @@ import AddSocial from "../../components/addSocial";
 
 
 
-const API_URL = "http://localhost:5005";
+const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
 function GameDetails(props){
     const [games, setGame] = useState(null);
@@ -120,13 +120,12 @@ function GameDetails(props){
                                                 <div className="" key={social._id}>
                                                     <div class="blog_post">
                                                         <div class="img_pod">
-                                                            <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image"/>
+                                                            <img src={games?.icon} alt="random image"/>
                                                         </div>
                                                         <div class="container_copy">
                                                             <p>{social.createdAt}</p>
-                                                            <h1>{social.userName}</h1>
-                                                            <p>{social.description}</p>
-                                                            <a class="btn_primary" href='#' target="_blank">Read More</a>
+                                                            <h1>{social.user}</h1>
+                                                            <p>{social.title}</p>
                                                         </div>
   
                                                     </div>

@@ -10,7 +10,7 @@ export default function Signup({ authenticate }) {
     username: "",
     password: "",
   });
-  const { username, password } = form;
+  const { username, password,email,profilePic,completeName,instagram,facebook,twitter,youtube,age } = form;
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -52,11 +52,24 @@ export default function Signup({ authenticate }) {
           type="text"
           name="completeName"
           placeholder=""
-          value={username}
+          value={completeName}
           onChange={handleInputChange}
-          required
+          
         />
         <label htmlFor="input-completeName">Complete Name</label>
+      </div>
+
+      <div className="usersign-box">
+        
+        <input
+          id="input-email"
+          type="text"
+          name="age"
+          placeholder=""
+          value={age}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Age</label>
       </div>
 
 
@@ -69,7 +82,7 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={username}
           onChange={handleInputChange}
-          required
+          
         />
         <label htmlFor="input-username">Username</label>
       </div>
@@ -81,12 +94,74 @@ export default function Signup({ authenticate }) {
           type="text"
           name="email"
           placeholder=""
-          value={username}
+          value={email}
           onChange={handleInputChange}
-          required
         />
         <label htmlFor="input-completeName">Email</label>
       </div>
+
+      <div className="usersign-box">
+        
+        <input
+          id="input-email"
+          type="text"
+          name="profilePic"
+          placeholder=""
+          value={profilePic}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Profile Pic</label>
+      </div>
+
+      <div className="usersign-box">
+        
+        <input
+          id="input-email"
+          type="text"
+          name="instagram"
+          placeholder=""
+          value={instagram}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Instagram</label>
+      </div>
+
+      <div className="usersign-box">
+        <input
+          id="input-email"
+          type="text"
+          name="youtube"
+          placeholder=""
+          value={youtube}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Youtube</label>
+      </div>
+      <div className="usersign-box">
+        
+        <input
+          id="input-email"
+          type="text"
+          name="twitter"
+          placeholder=""
+          value={twitter}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Twitter</label>
+      </div>
+
+      <div className="usersign-box">
+        <input
+          id="input-email"
+          type="text"
+          name="facebook"
+          placeholder=""
+          value={facebook}
+          onChange={handleInputChange}
+        />
+        <label htmlFor="input-completeName">Facebook</label>
+      </div>
+      
 
       <div className="usersign-box">
         
@@ -97,7 +172,6 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={password}
           onChange={handleInputChange}
-          required
           minLength="8"
         />
         <label htmlFor="input-password">Password</label>

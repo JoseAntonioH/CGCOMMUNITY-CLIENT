@@ -1,0 +1,296 @@
+
+.Pcontainer {
+    max-width: 700px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  
+  .Pcard-wrapper {
+    width: 400px;
+    height: 600px;
+    position: relative;
+  }
+  
+  .Pcard {
+    margin-top: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 625px;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+    
+    .Pcard-image {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: #000;
+      transition: .5s;
+    }
+    
+    .Pcard-image:hover img {
+      opacity: 0.4;
+      transition: .5s;
+    }
+  
+  
+  .Pcard:hover .Pcard-image {
+    transform: translateY(-120px);
+    transition: all .9s;
+  }
+
+  
+  
+  .Pcard:hover li:nth-child(1) a {
+      transition-delay: 0.1s;
+  }
+  .Pcard:hover li:nth-child(2) a {
+    transition-delay: 0.2s;
+  }
+  .Pcard:hover li:nth-child(3) a {
+    transition-delay: 0.3s;
+  }
+  .Pcard:hover li:nth-child(4) a {
+    transition-delay: 0.4s;
+  }
+  
+  /**** Personal Details ****/
+  
+  .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 0px;
+  }
+  
+    .details h2 {
+      margin: .2px 0;
+      padding: 0;
+      text-align: center;
+    }
+       
+.job-title {
+          font-size: .9rem;
+          
+          color: #333;
+          font-weight: 300;
+}
+    
+  
+  
+.jane {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    opacity: 0;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 3;
+    padding: 9px;
+    transition: .4s;
+}
+  
+.profile-two .social-icons li a {
+    border-radius: 50%;
+}
+  
+.Pcard:hover .profile-img--two {
+    transform: rotateY(180deg);
+}
+  
+.Pcard:hover .jane {
+    bottom: 0;
+    left: 0;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+  
+.profPic{
+    width: 100%;
+    height: 100%;
+}
+  
+.Psocial-media {
+   
+    padding: 0;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.Psocial-media li {
+    list-style: none;
+    margin: 0 15px;
+}
+  
+.Psocial-media li a {
+    position: relative; 
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: #333;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+}
+  
+.facebook::before {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background: #1060ff;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.facebook:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #1060ff;
+}
+  
+.facebook:hover {
+    background-color: #1060ff;
+    color: #1060ff;
+    box-shadow: 0 0 5px #1060ff;
+    text-shadow: 0 0 5px #1060ff;
+}
+
+.facebook-img{
+    height: 60px;
+}
+
+.instagram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background: #c707f7;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.instagram:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c707f7;
+}
+  
+.instagram:hover {
+    background-color: #c707f7;
+    color: #c707f7;
+    box-shadow: 0 0 5px #c707f7;
+    text-shadow: 0 0 5px #c707f7;
+}
+
+.instagram-img{
+    padding-top: 4px;
+    height: 50px;
+}
+
+.youtube::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background: #f70707;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.youtube:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #f70707;
+}
+  
+.youtube:hover {
+    background-color: #f70707;
+    color: #f70707;
+    box-shadow: 0 0 5px #f70707;
+    text-shadow: 0 0 5px #f70707;
+}
+
+.youtube-img{
+    padding-top: 13px;
+    height: 33px;
+}
+
+.twitter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background: #0797f7;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.twitter:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0797f7;
+}
+  
+.twitter:hover {
+    background-color: #0797f7;
+    color: #0797f7;
+    box-shadow: 0 0 5px #0797f7;
+    text-shadow: 0 0 5px #0797f7;
+}
+
+.twitter-img{
+    padding-top: 13px;
+    height: 33px;
+}
+
+.Psocial-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+}
+
+.card:hover .Psocial-media li a {
+    transform: translateY(0px);
+    opacity: 1; 
+  }

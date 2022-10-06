@@ -3,7 +3,6 @@
     width: 22em;
     height: 30em;
     margin-top: 6%;
-    margin-left: 8%;
     background: url(https://www.eleconomista.com.mx/__export/1581119523386/sites/eleconomista/img/2020/02/07/que-son-esports.jpg_423682103.jpg) no-repeat;
     background-size: 22em 30em;
     box-shadow: 20px 55px 55px rgba(0,0,0,.6);
@@ -188,4 +187,14 @@ space{
     .popup{
       width: 70%;
     }
+}
+
+.detailT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.t-box{
+    margin-left: 2%;
 }

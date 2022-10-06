@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./editGames.css";
 
-const API_URL = "http://localhost:5005";
+const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
 function EditGames(props) {
     const [gameName, setGameName] = useState("");
@@ -165,7 +165,7 @@ function EditGames(props) {
                     <span></span>
                     <span></span>
                     <span></span>
-                    Update Project
+                    Update Game
                 </button>
             </form>
 

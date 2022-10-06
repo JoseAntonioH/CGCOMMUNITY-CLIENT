@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import { Link,useParams,useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./detailsTournaments.css";
+import TournamentChart from "../../components/bracket";
 
-const API_URL = "http://localhost:5005";
+const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
 function DetailsTournament(props) {
     const [tournament, setTournament] = useState(null);
@@ -45,8 +46,7 @@ function DetailsTournament(props) {
 
         <div>
             <a  href="#popup1"><img className="trashcan" src="/images/trashcan.png"/></a>
-            <Link  ><img className="trashcan" src="/images/edit.png"/></Link>
-
+            
             <div id="popup1" class="overlay">
 	            <div class="popup">
 		            <h2>Are you sure to delete this Tournament?</h2>
@@ -61,6 +61,7 @@ function DetailsTournament(props) {
 		        </div>
 	        </div>
 
+            <div className="detailT">
             <>
         
             <div class="blog">
@@ -76,7 +77,7 @@ function DetailsTournament(props) {
                 </div>  
                 <div class="info">
                     <span>{tournament?.description}</span>
-                    <p><span><a>Join</a></span></p>
+                    
                 </div>
                 <div class="footer">
                     <div class="icon-holder">
@@ -92,6 +93,11 @@ function DetailsTournament(props) {
                 <div class="color-overlay"></div>
             </div>
             </>
+            <div className="t-box">
+            <TournamentChart/>
+            </div>
+            </div>
+
         </div>
     );
 }
