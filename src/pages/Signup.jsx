@@ -81,7 +81,7 @@ export default function Signup({ authenticate }) {
           value={completeName}
           onChange={handleInputChange}
         />
-        <label htmlFor="input-completeName">Complete Name</label>
+        <label htmlFor="input-completeName">Complete Name (required)</label>
       </div>
 
       <div className="usersign-box">
@@ -92,8 +92,9 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={age}
           onChange={handleInputChange}
+          required
         />
-        <label htmlFor="input-completeName">Age</label>
+        <label htmlFor="input-completeName">Age (required)</label>
       </div>
 
       <div className="usersign-box">
@@ -104,8 +105,9 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={email}
           onChange={handleInputChange}
+          required
         />
-        <label htmlFor="input-completeName">Email</label>
+        <label htmlFor="input-completeName">Email (required)</label>
       </div>
 
       <div className="usersign-box">
@@ -116,8 +118,9 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={profilePic}
           onChange={handleInputChange}
+          required
         />
-        <label htmlFor="input-completeName">Profile Pic</label>
+        <label htmlFor="input-completeName">Profile Pic (required)</label>
       </div>
 
       <div className="usersign-box">
