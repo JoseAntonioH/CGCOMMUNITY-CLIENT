@@ -3,7 +3,6 @@ import axios from "axios";
  
 const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
-
 function AddSocial(props) {
     const [user, setUser] = useState("");
     const [title, setTitle] = useState("");
@@ -17,16 +16,16 @@ function AddSocial(props) {
     
         const requestBody = { user,title,date,description,gameId };
         axios
-            .post(`${API_URL}/games/social`, requestBody)
-            .then((response) => {
-                setUser("");
-                setTitle("");
-                setDate("");
-                setDescription("");
-                props.refreshSocial();
-            })
-            .catch((error) => console.log(error));
-        };
+        .post(`${API_URL}/games/social`, requestBody)
+        .then((response) => {
+            setUser("");
+            setTitle("");
+            setDate("");
+            setDescription("");
+            props.refreshSocial();
+        })
+        .catch((error) => console.log(error));
+    };
  
     return (
         <div className="addT-box">

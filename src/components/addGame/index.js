@@ -1,14 +1,10 @@
 import React from "react";
-import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import "./addGame.css";
 
- 
 const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
-
- 
 function AddGame(props) {
     const [gameName, setGameName] = useState("");
     const [image, setImage] = useState("");
@@ -20,21 +16,14 @@ function AddGame(props) {
     const [facebook, setFacebook] = useState("");
     const [icon, setIcon] = useState("");
     const [developer, setDeveloper] = useState("");
-    const navigate = useNavigate();
- 
-
-  
     
-
-
     const handleSubmit = (e) => {                       
         e.preventDefault();
  
         const requestBody = { gameName, image, genre, platforms, twitter, instagram, youtube,facebook,icon,developer };
         axios
-            .post(`${API_URL}/games`, requestBody)
-            .then((response) => {
-            // Reset the state
+        .post(`${API_URL}/games`, requestBody)
+        .then((response) => {
             setGameName("");
             setImage("");
             setGenre("");
@@ -50,8 +39,6 @@ function AddGame(props) {
         .catch((error) => console.log(error));
     };
 
-
- 
     return (
         <div className="add-box">
             <form onSubmit={handleSubmit} className="signup__form">
@@ -91,7 +78,7 @@ function AddGame(props) {
                     required
                 />
                 <label>Genre</label>
-                </div>
+            </div>
 
             <div className="user-box">
                 <input
@@ -172,7 +159,6 @@ function AddGame(props) {
                 <span></span>
                 Add Game
             </button>
-
             </form>
         </div>
     );

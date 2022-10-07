@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Welcome to CG COMMUNITY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![imageCGCOM](/public/images/CG-COMMUNITY.png)
 
-## Available Scripts
+Welcome to the CG Community App, an app build for gamers by a gamer.
 
-In the project directory, you can run:
+## What is CG Community?
 
-### `yarn start`
+As mentioned before is an app for gamers and it encourages people to create a community around having fun and implroving your skills playing videogames.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![gaming](https://media.tag24.de/1200x800/y/6/y6cbh6txmkvwfpjf3hvmusme0nydmhqn.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Create Games`
 
-### `yarn test`
+Create a game on the games library to start building a community 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![games](https://assets3.thrillist.com/v1/image/1774469/414x310/crop;webp=auto;jpeg_quality=60;progressive.jpg)
 
-### `yarn build`
+### `Create tournaments`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can create tournaments, creating a name, a description, date, prize and even create and edit your own tournament bracket to keep track of the matches.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![gamingtournaments](https://moneyinc.com/wp-content/uploads/2016/05/eSports-750x500.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Create Posts`
 
-### `yarn eject`
+If you don´t have anyone to play with, you can create a post so people can know what you are looking for, maybe just have fun or playing competitve on ranked matches.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![gamingposts](https://img.g2a.com/700x394/1x1x0/online-games-to-play-with-friends/6b61c315fa384932ad2495d6)

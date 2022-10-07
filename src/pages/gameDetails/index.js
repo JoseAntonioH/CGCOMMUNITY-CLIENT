@@ -7,8 +7,6 @@ import SocialMedia from "../../components/social/social";
 import AddTournament from "../../components/addTournament";
 import AddSocial from "../../components/addSocial";
 
-
-
 const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
 function GameDetails(props){
@@ -17,20 +15,16 @@ function GameDetails(props){
     const navigate = useNavigate();
 
     const deleteGame = () => {
-
-        // Make a DELETE request to delete the project
         axios
-          .delete(`${API_URL}/games/${id}`)
-          .then(() => {
-            // Once the delete request is resolved successfully
-            // navigate back to the list of projects.
+        .delete(`${API_URL}/games/${id}`)
+        .then(() => {
             navigate("/games");
-          })
-          .catch((err) => console.log(err));
-      };
+        })
+        .catch((err) => console.log(err));
+    };
 
     const getGame = () => {
-      axios
+        axios
         .get(`${API_URL}/games/${id}`)
         .then((response) => {
             const oneGame=response.data;
@@ -50,12 +44,10 @@ function GameDetails(props){
             <Link  to={`/games/edit/${games?._id}`}><img className="trashcan" src="../images/edit.png"/></Link>
         
             <div className="gamedetails-page"> 
-
                 <div id="popup1" class="overlay">
 	                <div class="popup">
 		                <h2>Are you sure to delete this Game?</h2>
 		                <a class="close" href="#">×</a>
-        
                         <button className="excelentbutton" onClick={deleteGame}>
                             <span></span>
                             <span></span>
@@ -81,14 +73,12 @@ function GameDetails(props){
                                         <img class="card__thumb" src={games?.icon}  alt="" />
                                         <div class="card__header-text">
                                             <h3 class="card__title">{games?.gameName}</h3>            
-                                    
                                         </div>
                                     </div>
                                     <div className="game-info">
                                         <p><span><img className="img-platform" src="../images/platform.png"/>: {games?.platforms}</span></p>
                                         <p><span><img className="img-genre" src="../images/genre.png"/>: {games?.genre}</span></p>
                                     </div>
-                            
                                 </div>
                                 </a>      
                             </li>
@@ -99,7 +89,6 @@ function GameDetails(props){
                                         {games && 
                                             games.tournament.map((tournament)=>(
                                                 <div className="columns-extra" key={tournament._id}>  
-                    
                                                     <Link className="link-tournament" to={`/games/tournaments/${tournament._id}`}>
                                                         <span></span>
                                                         <span></span>
@@ -108,26 +97,24 @@ function GameDetails(props){
                                                         {tournament.tournamentName}
                                                     </Link>
                                                 </div>
-                    
-                    
                                             ))
                                         }
+                                    
                                     </div> 
                                     <div className="column-social" >
+                                        
                                         {games && 
                                             games.social.map((social)=>(
-                     
                                                 <div className="" key={social._id}>
                                                     <div class="blog_post">
                                                         <div class="img_pod">
                                                             <img src={games?.icon} alt="random image"/>
                                                         </div>
                                                         <div class="container_copy">
-                                                            <p>{social.createdAt}</p>
+                                                            <p>{social.date}</p>
                                                             <h1>{social.user}</h1>
                                                             <p>{social.title}</p>
                                                         </div>
-  
                                                     </div>
                                                 </div> 
                                             ))
@@ -135,14 +122,13 @@ function GameDetails(props){
                                     </div>
                                 </div>
                             </li>
-                
                         </ul>
                     </>
                 )}
+
                 <SocialMedia/>
 
-                <div className="container-tourn"  >
-                    
+                <div className="container-tourn"  >    
                     <div className="card-games">
                         <div className="games-face face1">
                             <div className="content-games">                     
@@ -163,7 +149,6 @@ function GameDetails(props){
                 </div>
 
                 <div className="container-social"  >
-                    
                     <div className="card-games">
                         <div className="games-face face1">
                             <div className="content-games">                     
@@ -184,9 +169,7 @@ function GameDetails(props){
                 </div>
             </div>
         </div>
-
     );
 }
-
 
 export default GameDetails;

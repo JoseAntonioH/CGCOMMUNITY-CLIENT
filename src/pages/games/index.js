@@ -4,18 +4,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./gamesstyle.css";
 import AddGame from "../../components/addGame";
-//import AddGame from "../components/AddGame";
-
 
 const API_URL = `${process.env.REACT_APP_SERVER_MY_URL}`;
 
 
-
-
 function Games(){
     const [games, setGames] = useState([]);
-    
-  
 
     const getAllGames = () => {
       axios
@@ -33,30 +27,29 @@ function Games(){
         <div className="games-page">
 
             {games.map((game) => {
-                return ( 
+                return (
+
                     <div className="container-games" key={game._id} >
-                    
-                    <div class="card-games">
-                        <div class="games-face face1">
-                            <div class="content-games">           
-                                <Link to={`/games/${game._id}`}>
-                                    <h3>{game.gameName}</h3>
-                                </Link>
+                        <div class="card-games">
+                            <div class="games-face face1">
+                                <div class="content-games">           
+                                    <Link to={`/games/${game._id}`}>
+                                        <h3>{game.gameName}</h3>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div class="games-face face2">
+                                <div class="content-games">
+                                    <img className="game-image" src={game.image}/>
+                                </div>
                             </div>
                         </div>
-                        <div class="games-face face2">
-                            <div class="content-games">
-                                <img className="game-image" src={game.image}/>
-                            </div>
-                        </div>
-                    </div>
                     </div>
 
 
                 );
             })}     
              
-
             <div id="popup1" class="overlay">
 	            <div class="popup">
 		            <h2>Add Game</h2>
@@ -67,8 +60,7 @@ function Games(){
 	            </div>
             </div>
 
-            <div className="container-games"  >
-                    
+            <div className="container-games">       
                 <div className="card-games">
                     <div className="games-face face1">
                         <div className="content-games">                     
@@ -80,6 +72,5 @@ function Games(){
         </div>
     );
 }
-
 
 export default Games;

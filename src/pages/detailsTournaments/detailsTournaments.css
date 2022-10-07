@@ -57,12 +57,11 @@
 }
   
 h3{
-     display: inline-block;
-     font-weight: 500;
-     letter-spacing: 2px;
-     font-size: 1.4em;
-     
-     text-align: center;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.4em; 
+    text-align: center;
 }
   
 .intro{
@@ -74,7 +73,6 @@ h3{
     font-style: italic;
     line-height: 18px;
 }
-  
   
 .info{
     font-family: 'Droid Serif', serif;
@@ -112,7 +110,7 @@ h3{
   
 .icon-holder i{ 
     color: #D0BC57;
-  }
+}
   
 .icon-holder span, h3{
     color: #aCcff0;
@@ -181,11 +179,11 @@ space{
   
 @media screen and (max-width: 700px){
     .box{
-      width: 70%;
+        width: 70%;
     }
     
     .popup{
-      width: 70%;
+        width: 70%;
     }
 }
 

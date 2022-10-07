@@ -19,7 +19,7 @@ function Feautures(){
                     </div>
                     <div class="face face2">
                         <div class="content">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+                            <p>"Create a library of games for each commmunity and attractr more gamers"</p>
                         </div>
                     </div>
                 </div>
@@ -33,11 +33,10 @@ function Feautures(){
                     </div>
                     <div class="face face2">
                         <div class="content">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+                            <p>"Create tournaments to put your skills to the test and look who is the best"</p>
                         </div>
                     </div>
                 </div>
-    
     
                 <div class="card">
                     <div class="face face1">
@@ -48,7 +47,7 @@ function Feautures(){
                     </div>
                     <div class="face face2">
                         <div class="content">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab repudiandae, explicabo voluptate et hic cum ratione a. Officia delectus illum perferendis maiores quia molestias vitae fugiat aspernatur alias corporis?</p>
+                            <p>"Create posts to look for playing partners, just to have a good time or to improve your skills"</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +55,5 @@ function Feautures(){
         </div>      
     )
 }
-
-
 
 export default Feautures;

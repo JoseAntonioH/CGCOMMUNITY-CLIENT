@@ -16,9 +16,6 @@ function EditGames(props) {
     const [facebook, setFacebook] = useState("");
     const [icon, setIcon] = useState("");
     const [developer, setDeveloper] = useState("");
-    
-   
-
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -59,7 +56,6 @@ function EditGames(props) {
             <form onSubmit={handleFormSubmit}>
 
                 <div className="usersign-box">
-        
                     <input
                         type="text"
                         name="gameName"
@@ -71,7 +67,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="image"
                         value={image}
@@ -82,7 +77,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="genre"
                         value={genre}
@@ -93,7 +87,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="platforms"
                         value={platforms}
@@ -104,7 +97,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="twitter"
                         value={twitter}
@@ -115,7 +107,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="instagram"
                         value={instagram}
@@ -125,8 +116,7 @@ function EditGames(props) {
                     <label>Instagram</label>
                 </div>
 
-                <div className="usersign-box">
-        
+                <div className="usersign-box">  
                     <input
                         name="youtube"
                         value={youtube}
@@ -137,7 +127,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="facebook"
                         value={facebook}
@@ -148,7 +137,6 @@ function EditGames(props) {
                 </div>
 
                 <div className="usersign-box">
-        
                     <input
                         name="icon"
                         value={icon}
@@ -158,8 +146,6 @@ function EditGames(props) {
                     <label>Icon</label>
                 </div>
 
-        
-
                 <button type="submit">
                     <span></span>
                     <span></span>
@@ -168,8 +154,6 @@ function EditGames(props) {
                     Update Game
                 </button>
             </form>
-
-      
         </div>
     );
 }

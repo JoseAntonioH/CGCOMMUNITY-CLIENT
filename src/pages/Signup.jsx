@@ -46,7 +46,33 @@ export default function Signup({ authenticate }) {
       <form onSubmit={handleFormSubmission} className="auth__form">
 
       <div className="usersign-box">
-        
+        <input
+          id="input-username"
+          type="text"
+          name="username"
+          placeholder=""
+          value={username}
+          onChange={handleInputChange}
+          required
+        />
+        <label htmlFor="input-username">Username (required)</label>
+      </div>
+
+      <div className="usersign-box">
+        <input
+          id="input-password"
+          type="password"
+          name="password"
+          placeholder=""
+          value={password}
+          onChange={handleInputChange}
+          minLength="8"
+          required
+        />
+        <label htmlFor="input-password">Password (required)</label>
+      </div>
+
+      <div className="usersign-box">
         <input
           id="input-completeName"
           type="text"
@@ -54,13 +80,11 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={completeName}
           onChange={handleInputChange}
-          
         />
         <label htmlFor="input-completeName">Complete Name</label>
       </div>
 
       <div className="usersign-box">
-        
         <input
           id="input-email"
           type="text"
@@ -72,23 +96,7 @@ export default function Signup({ authenticate }) {
         <label htmlFor="input-completeName">Age</label>
       </div>
 
-
       <div className="usersign-box">
-        
-        <input
-          id="input-username"
-          type="text"
-          name="username"
-          placeholder=""
-          value={username}
-          onChange={handleInputChange}
-          
-        />
-        <label htmlFor="input-username">Username</label>
-      </div>
-
-      <div className="usersign-box">
-        
         <input
           id="input-email"
           type="text"
@@ -101,7 +109,6 @@ export default function Signup({ authenticate }) {
       </div>
 
       <div className="usersign-box">
-        
         <input
           id="input-email"
           type="text"
@@ -114,7 +121,6 @@ export default function Signup({ authenticate }) {
       </div>
 
       <div className="usersign-box">
-        
         <input
           id="input-email"
           type="text"
@@ -137,8 +143,8 @@ export default function Signup({ authenticate }) {
         />
         <label htmlFor="input-completeName">Youtube</label>
       </div>
-      <div className="usersign-box">
-        
+
+      <div className="usersign-box">  
         <input
           id="input-email"
           type="text"
@@ -162,36 +168,21 @@ export default function Signup({ authenticate }) {
         <label htmlFor="input-completeName">Facebook</label>
       </div>
       
+      {error && (
+        <div className="error-block">
+          <p>There was an error submiting the form:</p>
+          <p>{error.message}</p>
+        </div>
+      )}
 
-      <div className="usersign-box">
-        
-        <input
-          id="input-password"
-          type="password"
-          name="password"
-          placeholder=""
-          value={password}
-          onChange={handleInputChange}
-          minLength="8"
-        />
-        <label htmlFor="input-password">Password</label>
-      </div>
-
-        {error && (
-          <div className="error-block">
-            <p>There was an error submiting the form:</p>
-            <p>{error.message}</p>
-          </div>
-        )}
-
-        <button className="button__submit" type="submit">
+      <button className="button__submit" type="submit">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
           Submit
-        </button>
-      </form>
+      </button>
+    </form>
     </div>
   );
 }

@@ -41,8 +41,7 @@ export default function LogIn({ authenticate }) {
       <h1>Log In</h1>
       <form onSubmit={handleFormSubmission} className="signup__form">
         
-        <div className="user-box">
-        
+      <div className="user-box">
         <input
           id="input-username"
           type="text"
@@ -53,11 +52,9 @@ export default function LogIn({ authenticate }) {
           required
         />
         <label htmlFor="input-username">Username</label>
+      </div>
 
-        </div>
-
-        <div className="user-box">
-        
+      <div className="user-box">
         <input
           id="input-password"
           type="password"
@@ -69,22 +66,21 @@ export default function LogIn({ authenticate }) {
           minLength="8"
         />
         <label htmlFor="input-password">Password</label>
+      </div>
 
+      {error && (
+        <div className="error-block">
+          <p>{error.message}</p>
         </div>
+      )}
 
-        {error && (
-          <div className="error-block">
-            <p>{error.message}</p>
-          </div>
-        )}
-
-        <button className="button__submit" type="submit">
+      <button className="button__submit" type="submit">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
           Submit
-        </button>
+      </button>
       </form>
     </div>
   );
