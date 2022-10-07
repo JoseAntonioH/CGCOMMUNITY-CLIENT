@@ -24,6 +24,14 @@ export default function Signup({ authenticate }) {
     const credentials = {
       username,
       password,
+      email,
+      profilePic,
+      completeName,
+      instagram,
+      facebook,
+      twitter,
+      youtube,
+      age
     };
     signup(credentials).then((res) => {
       if (!res.status) {
