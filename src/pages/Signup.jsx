@@ -80,13 +80,14 @@ export default function Signup({ authenticate }) {
           placeholder=""
           value={completeName}
           onChange={handleInputChange}
+          required
         />
         <label htmlFor="input-completeName">Complete Name (required)</label>
       </div>
 
       <div className="usersign-box">
         <input
-          id="input-email"
+          id="input-age"
           type="text"
           name="age"
           placeholder=""
@@ -94,7 +95,7 @@ export default function Signup({ authenticate }) {
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="input-completeName">Age (required)</label>
+        <label htmlFor="input-age">Age (required)</label>
       </div>
 
       <div className="usersign-box">
@@ -107,12 +108,12 @@ export default function Signup({ authenticate }) {
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="input-completeName">Email (required)</label>
+        <label htmlFor="input-email">Email (required)</label>
       </div>
 
       <div className="usersign-box">
         <input
-          id="input-email"
+          id="input-ppic"
           type="text"
           name="profilePic"
           placeholder=""
@@ -120,55 +121,55 @@ export default function Signup({ authenticate }) {
           onChange={handleInputChange}
           required
         />
-        <label htmlFor="input-completeName">Profile Pic (required)</label>
+        <label htmlFor="input-ppic">Profile Pic (required)</label>
       </div>
 
       <div className="usersign-box">
         <input
-          id="input-email"
+          id="input-instagram"
           type="text"
           name="instagram"
           placeholder=""
           value={instagram}
           onChange={handleInputChange}
         />
-        <label htmlFor="input-completeName">Instagram</label>
+        <label htmlFor="input-instagram">Instagram</label>
       </div>
 
       <div className="usersign-box">
         <input
-          id="input-email"
+          id="input-youtube"
           type="text"
           name="youtube"
           placeholder=""
           value={youtube}
           onChange={handleInputChange}
         />
-        <label htmlFor="input-completeName">Youtube</label>
+        <label htmlFor="input-youtube">Youtube</label>
       </div>
 
       <div className="usersign-box">  
         <input
-          id="input-email"
+          id="input-twitter"
           type="text"
           name="twitter"
           placeholder=""
           value={twitter}
           onChange={handleInputChange}
         />
-        <label htmlFor="input-completeName">Twitter</label>
+        <label htmlFor="input-twitter">Twitter</label>
       </div>
 
       <div className="usersign-box">
         <input
-          id="input-email"
+          id="input-facebook"
           type="text"
           name="facebook"
           placeholder=""
           value={facebook}
           onChange={handleInputChange}
         />
-        <label htmlFor="input-completeName">Facebook</label>
+        <label htmlFor="input-facebook">Facebook</label>
       </div>
       
       {error && (
